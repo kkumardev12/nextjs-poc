@@ -17,6 +17,7 @@ export function GET() {
 }
 
 export function POST() {
+  
   const uuser = new User({
     name: "kundan",
     email: "kundan@gmail.com",
