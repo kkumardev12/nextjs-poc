@@ -1,15 +1,33 @@
 "use client"
 import { useState } from 'react';
+import Box from '@mui/material/Box';
+// import TextField from '@mui/material/TextField';
+// import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid2';
+// import FormControl from '@mui/material/FormControl';
+import {FormControl, Button, TextField} from '@mui/material';
+
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isEmail, setIsEmail] = useState(false);
     const [isPassword, setIsPassword] = useState(false);
 
+    const validateEmail = (email:any) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      };
+
     function handleEmailChange(e: any) {
         // console.log(`Email: ${e.target.value}`);
         setIsEmail(false);
         setEmail(e.target.value);
+        if (!validateEmail(e.target.value)) {
+            // setError("Invalid email format");
+            setIsEmail(true);
+          } else {
+            setIsEmail(false);
+          }
     }
 
     function handlePasswordChange(e: any) {
@@ -52,7 +70,32 @@ export default function Login() {
         <div className='container'>
             <div className="login form">
                 <header>Login</header>
-                <form className='form'>
+                <Box
+      component="form"
+      sx={{ '& > :not(style)': { m: 1, width: '25ch' } }}
+      noValidate
+    >
+      {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="filled-basic" label="Filled" variant="filled" /> */}
+      <Grid container spacing={2}>
+        <Grid size={12}>
+        <FormControl fullWidth sx={{ m: 1 }}>
+            <TextField id="standard-basic" label="Username" variant="standard" />
+        </FormControl>
+        </Grid>
+        <Grid size={12}>
+            <TextField className='input-filed' id="standard-basic" label="Username" variant="standard" />
+        </Grid>
+        <Grid size={12}>
+            <TextField id="standard-basic" label="Username" variant="standard" />
+        </Grid>
+    </Grid>
+{/*       
+      <TextField id="standard-basic" label="Email" variant="standard" />
+      <TextField id="standard-basic" label="Password" variant="standard" /> */}
+      <Button variant="contained">Submit</Button>
+    </Box>
+                {/* <form className='form'>
                     <div className='input-sct'>
                         <input type="email" placeholder='Please enter email' value={email}
                             onChange={handleEmailChange} />
@@ -66,7 +109,7 @@ export default function Login() {
 
                     </div>
                     <button type="button" className='button' onClick={handleSignForm}>Submit</button>
-                </form>
+                </form> */}
             </div>
         </div>
     )

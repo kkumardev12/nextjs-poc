@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <>
-      <h3 className='logo'>Logo</h3>
+      {/* <h3 className='logo'>Logo</h3> */}
       <ul className='nav'>
         <li><Link href="/">Home</Link></li>
         <li>
