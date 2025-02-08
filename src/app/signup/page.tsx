@@ -7,6 +7,7 @@ export default function Signup() {
     const [isUsername, setIsUsername] = useState(false);
     const [isEmail, setIsEmail] = useState(false);
     const [isPassword, setIsPassword] = useState(false);
+    const [response, setResponse] = useState<{ message: string; data?: { name: string; email: string, password:string } } | null>(null);
 
     function handleEmailChange(e: any) {
         // console.log(`Email: ${e.target.value}`);
@@ -25,7 +26,7 @@ export default function Signup() {
         setUsername(e.target.value);
     }
 
-    function handleSignForm() {
+    async function handleSignForm() {
         if (username != '') {
             setIsUsername(false);
         } else {
@@ -49,10 +50,34 @@ export default function Signup() {
         if (email && password) {
         
             const body = {
+                name:username,
                 email: email,
                 password: password
             };
             console.log(`signup body: ${JSON.stringify(body)}`);
+
+            try {
+                const response = await fetch('/api/user', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ username, email, password }), // Send data as JSON
+                });
+          
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+          
+                const data = await response.json();
+                console.log("regitration successfully");
+                setResponse(data);
+                console.log("")
+              } catch (error) {
+                console.log("regitration not successfully");
+                // setError(error instanceof Error ? error.message : 'An error occurred');
+            } finally {
+            }
             // const signUpData = post("www.postapi", body);
             // if(signUpData){
             //     console.log("regitration successfully");

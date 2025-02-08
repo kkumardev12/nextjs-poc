@@ -5,24 +5,39 @@ import { User } from "../../models/user";
 connectDb();
 console.log('call api');
 
-export function GET() {
-  const users = [
-    {
-      name: 'test1',
-      username: 'abc@gmail.com',
-      password: '123'
-    }
-  ];
+export async function GET(req: Request) {
+  let users = [];
+  try{
+    users = await User.find();
+  }catch(error){
+    console.log(error);
+  }
   return NextResponse.json(users);
+
 }
 
-export function POST() {
-  
-  const uuser = new User({
-    name: "kundan",
-    email: "kundan@gmail.com",
-    password: "ddfdfs"
+export async function POST(req: Request) {
+
+  const { name, email, password } = await req.json();
+
+  const user = new User({
+    name,
+    email,
+    password
   });
-  uuser.save();
-  console.log("user is created");
+  try {
+    const createdUser = await user.save();
+    const response = NextResponse.json(user, {
+      status: 200
+    });
+    console.log("user is created", response);
+    return response;
+  } catch (err) {
+    console.log(err);
+    return NextResponse.json({
+      message: "Failed to create user!!",
+      status: false
+    })
+  }
+
 }

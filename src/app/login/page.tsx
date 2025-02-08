@@ -77,7 +77,7 @@ export default function Login() {
     >
       {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       <TextField id="filled-basic" label="Filled" variant="filled" /> */}
-      <Grid container spacing={2}>
+      {/* <Grid container spacing={2}>
         <Grid size={12}>
         <FormControl fullWidth sx={{ m: 1 }}>
             <TextField id="standard-basic" label="Username" variant="standard" />
@@ -89,13 +89,13 @@ export default function Login() {
         <Grid size={12}>
             <TextField id="standard-basic" label="Username" variant="standard" />
         </Grid>
-    </Grid>
+    </Grid> */}
 {/*       
       <TextField id="standard-basic" label="Email" variant="standard" />
       <TextField id="standard-basic" label="Password" variant="standard" /> */}
-      <Button variant="contained">Submit</Button>
+      {/* <Button variant="contained">Submit</Button> */}
     </Box>
-                {/* <form className='form'>
+                <form className='form'>
                     <div className='input-sct'>
                         <input type="email" placeholder='Please enter email' value={email}
                             onChange={handleEmailChange} />
@@ -109,7 +109,7 @@ export default function Login() {
 
                     </div>
                     <button type="button" className='button' onClick={handleSignForm}>Submit</button>
-                </form> */}
+                </form>
             </div>
         </div>
     )

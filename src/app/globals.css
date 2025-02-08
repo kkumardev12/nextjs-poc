@@ -118,3 +118,145 @@ body{
 .tabs-sct .css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
   color: #000 !important;
 }
+
+
+.pop1 a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 8px;
+}
+.pop1 li {
+  font-style: italic;
+  color: rgb(31, 123, 39);
+  font-size: 27px;
+  display: inline-block;
+  border: hidden;
+  padding: 1px 1px 1px 1px; 
+  margin: 1px 0px;
+  }
+.img1{padding: 2px 2px ;}
+
+.pop3{
+  margin: -11px -36px 9px -46px;
+}
+.pop2{
+  position: relative;
+  margin: -623px 58px 0px 952px}
+
+.inp{
+  border: solid;
+  border-radius: 20px;
+  padding: 10px 30px 5px 30px;
+}
+.sear{
+  margin: 10px 9px;
+  position: absolute;
+}
+.cool1{ 
+  position: absolute;
+  margin: 193px 28px 16px 151px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cool2{ 
+  position: absolute;
+  margin: 145px 15px 3px 135px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 6px;
+}
+ .cool3{text-align: center;
+
+ }
+ .cool4{position: absolute;
+  margin: 30px 5px;}
+.cool5
+{  position: absolute;
+  margin: -387px 80px;
+}
+  
+  .paper2{
+  position: absolute;
+  margin: -513px 58px 0px 952px;
+ }
+
+ 
+ .img4{
+  margin: 499px 327px 0px;
+ }
+ .img5{
+  margin: 47px 33px;
+ }
+ .got1{
+  margin-left: -7px;
+  padding: 18px;
+  background-color: #1d1e27;
+  color: azure;
+ }
+
+  .got2{
+  margin: -17px 24px 21px -7px;  
+  background-color: #1d1e27;
+  padding: 27px 451px;
+  color: azure;
+
+}
+.typo1{ 
+margin-top: 9px !important;
+      margin-left:-442px !important;
+    
+}
+.typo2{
+  margin: -263px 47px!important;
+}
+.typo3{
+  margin: -490px -295px 0px 546px !important ;
+}
+.typo4{
+  margin: 43px -427px !important;
+}
+.typo5{
+  margin:-285px -54px  !important;
+}
+  .typo6{ 
+    margin: -286px -255px 0 546px !important;
+} 
+.p1{
+  margin: 11px -427px;
+}
+.p2{
+  margin: 277px 90px;
+}
+.p3{
+  margin: 17px -364px 0px 549px;
+}
+.p4{
+  margin: 43px -414px;
+}
+.p5{
+  margin: 322px -8px 0px 1px;
+}
+.p6{
+  margin: 35px -295px 0px 590px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
